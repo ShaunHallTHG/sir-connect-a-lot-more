@@ -4,13 +4,11 @@ import com.thehutgroup.accelerator.connectn.player.Board;
 import com.thehutgroup.accelerator.connectn.player.Counter;
 import com.thehutgroup.accelerator.connectn.player.GameConfig;
 import com.thg.accelerator19.connectn.ai.shaunhall.connectn.SirConnectALotMore;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static com.thehutgroup.accelerator.connectn.player.Counter.O;
 import static com.thehutgroup.accelerator.connectn.player.Counter.X;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Unit test for simple App.
@@ -36,7 +34,7 @@ public class SirConnectALotMoreTest
 
         Board board = new Board(counters, new GameConfig(width, height, nInARowForWin));
         int c = sirConnectALotMore.makeMove(board);
-        Assert.assertEquals(3, c);
+        assertEquals(3, c);
     }
 
     @Test
@@ -58,7 +56,7 @@ public class SirConnectALotMoreTest
 
         Board board = new Board(counters, new GameConfig(width, height, nInARowForWin));
         int c = sirConnectALotMore.makeMove(board);
-        Assert.assertNotEquals(0, c);
+        assertNotEquals(0, c);
     }
 
     @Test
